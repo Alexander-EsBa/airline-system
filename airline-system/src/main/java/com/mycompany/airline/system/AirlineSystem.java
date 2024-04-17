@@ -10,6 +10,7 @@ package com.mycompany.airline.system;
 public class AirlineSystem {
 
     public static void main(String[] args) {
-
+        AirlineUI airlineUI = new AirlineUI();
+        airlineUI.setVisible(true);
     }
 }

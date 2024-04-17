@@ -89,4 +89,20 @@ public class Flight {
     public void setDistance(int distance) {
         this.distance = distance;
     }
+
+    // Methods
+
+    @Override
+    public String toString() {
+        String str = "";
+        str += "Flight ID: " + flightID + "\n";
+        str += "Origin: " + origin.getName() + "\n";
+        str += "Destination: " + destination.getName() + "\n";
+        str += "Airplane: " + airplane.getAirplaneID() + "\n";
+        str += "Departure Time: " + departureTime + "\n";
+        str += "Arrival Time: " + arrivalTime + "\n";
+        str += "Duration: " + duration + " hours\n";
+        str += "Distance: " + distance + " km\n";
+        return str;
+    }
 }

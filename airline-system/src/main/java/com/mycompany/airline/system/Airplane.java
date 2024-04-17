@@ -6,6 +6,7 @@ public class Airplane {
     private String airplaneModel;
     private int airplaneCapacity;
     private Seat[][] seats;
+    private boolean isAvailable;
 
     // Constructor
     public Airplane(String airplaneID, String airplaneModel, int rows, int columns){
@@ -13,6 +14,7 @@ public class Airplane {
         this.airplaneModel = airplaneModel;
         this.airplaneCapacity = rows * columns;
         this.seats = new Seat[rows][columns];
+        this.isAvailable = true;
         for(int i = 0; i < rows; i++){
             for(int j = 0; j < columns; j++){
                 this.seats[i][j] = new Seat(i + 1, (char)('A' + j));
@@ -53,11 +55,29 @@ public class Airplane {
         this.seats = seats;
     }
 
+    public boolean isAvailable() {
+        return isAvailable;
+    }
+
+    public void setAvailable(boolean available) {
+        isAvailable = available;
+    }
+
     // Methods
+    @Override
+    public String toString() {
+        String str = "";
+        str += "Airplane ID: " + airplaneID + "\n";
+        str += "Airplane Model: " + airplaneModel + "\n";
+        str += "Airplane Capacity: " + airplaneCapacity + "\n";
+        str += "Available: " + (isAvailable ? "Yes" : "No") + "\n";
+        return str;
+    }
+
     public String displaySeats(){
         StringBuilder str = new StringBuilder();
         // Print column headers
-        str.append("   "); // For alignment
+        str.append("     "); // For alignment
         for(int j = 0; j < seats[0].length; j++){
             str.append((char)('A' + j) + " ");
         }
