@@ -73,6 +73,21 @@ public class Airline {
         return fleet.toString();
     }
 
+    public String showFlights() {
+        StringBuilder flightList = new StringBuilder();
+        for (Flight flight : flights) {
+            flightList.append("========== Flight ").append(flight.getFlightID()).append(" ==========\n\n");
+            flightList.append("Origin: ").append(flight.getOrigin().getName()).append("\n");
+            flightList.append("Destination: ").append(flight.getDestination().getName()).append("\n");
+            flightList.append("Airplane: ").append(flight.getAirplane().getAirplaneID()).append("\n");
+            flightList.append("Departure Time: ").append(flight.getDepartureTime()).append("\n");
+            flightList.append("Arrival Time: ").append(flight.getArrivalTime()).append("\n");
+            flightList.append("Duration: ").append(flight.getDuration()).append(" hours\n");
+            flightList.append("Distance: ").append(flight.getDistance()).append(" km\n\n");
+        }
+        return flightList.toString();
+    }
+
     public String showAircraft(String id) {
         for (Airplane airplane : airplanes) {
             if (Objects.equals(airplane.getAirplaneID(), id)) {
@@ -87,5 +102,14 @@ public class Airline {
             }
         }
         return "Aircraft not found";
+    }
+
+    public Airplane getAirplane(String id) {
+        for (Airplane airplane : airplanes) {
+            if (Objects.equals(airplane.getAirplaneID(), id)) {
+                return airplane;
+            }
+        }
+        return null;
     }
 }
