@@ -6,6 +6,7 @@ package com.mycompany.reservation.system;
 
 import com.mycompany.airline.system.*;
 
+import javax.swing.*;
 import java.io.IOException;
 import java.net.ServerSocket;
 import java.util.ArrayList;
@@ -48,7 +49,27 @@ public class ReservationSysUI extends javax.swing.JFrame {
         jScrollPane1 = new javax.swing.JScrollPane();
         jTextArea1 = new javax.swing.JTextArea();
         updateFlights = new javax.swing.JButton();
+        jPanel5 = new javax.swing.JPanel();
+        jLabel3 = new javax.swing.JLabel();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        jTextArea2 = new javax.swing.JTextArea();
+        showAllTKT = new javax.swing.JButton();
+        ticketID = new javax.swing.JTextField();
+        showTKT = new javax.swing.JButton();
         jPanel3 = new javax.swing.JPanel();
+        jPanel6 = new javax.swing.JPanel();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        flightIDRes = new javax.swing.JTextField();
+        lookUpFl = new javax.swing.JButton();
+        jScrollPane3 = new javax.swing.JScrollPane();
+        jTextArea3 = new javax.swing.JTextArea();
+        jLabel6 = new javax.swing.JLabel();
+        row = new javax.swing.JTextField();
+        jLabel7 = new javax.swing.JLabel();
+        col = new javax.swing.JTextField();
+        jLabel8 = new javax.swing.JLabel();
+        reserve = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -108,6 +129,64 @@ public class ReservationSysUI extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
+        jLabel3.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        jLabel3.setText("MY TICKETS");
+
+        jTextArea2.setColumns(20);
+        jTextArea2.setRows(5);
+        jScrollPane2.setViewportView(jTextArea2);
+
+        showAllTKT.setText("Show All");
+        showAllTKT.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                showAllTKTActionPerformed(evt);
+            }
+        });
+
+        showTKT.setText("Show Ticket");
+        showTKT.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                showTKTActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
+        jPanel5.setLayout(jPanel5Layout);
+        jPanel5Layout.setHorizontalGroup(
+            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel5Layout.createSequentialGroup()
+                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel5Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jScrollPane2))
+                    .addGroup(jPanel5Layout.createSequentialGroup()
+                        .addGap(69, 69, 69)
+                        .addComponent(jLabel3)
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addGroup(jPanel5Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(showAllTKT)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 23, Short.MAX_VALUE)
+                        .addComponent(showTKT)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(ticketID, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap())
+        );
+        jPanel5Layout.setVerticalGroup(
+            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel5Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel3)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 202, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(showAllTKT)
+                    .addComponent(ticketID, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(showTKT))
+                .addContainerGap())
+        );
+
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
@@ -115,27 +194,137 @@ public class ReservationSysUI extends javax.swing.JFrame {
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(159, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
 
         jTabbedPane1.addTab("Dashboard", jPanel2);
 
+        jPanel3.setBackground(new java.awt.Color(255, 255, 255));
+
+        jLabel4.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        jLabel4.setText("MAKE A RESERVATION");
+
+        jLabel5.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        jLabel5.setText("Enter flight ID:");
+
+        lookUpFl.setText("Look Up");
+        lookUpFl.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                lookUpFlActionPerformed(evt);
+            }
+        });
+
+        jTextArea3.setColumns(20);
+        jTextArea3.setRows(5);
+        jScrollPane3.setViewportView(jTextArea3);
+
+        jLabel6.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        jLabel6.setText("Select Seat:");
+
+        jLabel7.setText("Row");
+
+        jLabel8.setText("Col");
+
+        reserve.setText("Reservar");
+        reserve.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                reserveActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
+        jPanel6.setLayout(jPanel6Layout);
+        jPanel6Layout.setHorizontalGroup(
+            jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel6Layout.createSequentialGroup()
+                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel6Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jScrollPane3))
+                    .addGroup(jPanel6Layout.createSequentialGroup()
+                        .addGap(34, 34, 34)
+                        .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel6Layout.createSequentialGroup()
+                                .addComponent(jLabel5)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(flightIDRes, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(lookUpFl))
+                            .addComponent(jLabel4))
+                        .addGap(0, 30, Short.MAX_VALUE))
+                    .addGroup(jPanel6Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jLabel6)
+                        .addGap(12, 12, 12)
+                        .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jLabel7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(row, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(18, 18, 18)
+                        .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(col, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel8))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(reserve)
+                        .addGap(35, 35, 35)))
+                .addContainerGap())
+        );
+        jPanel6Layout.setVerticalGroup(
+            jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel6Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel4)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel5)
+                    .addComponent(flightIDRes, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lookUpFl))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 149, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel6Layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel7)
+                            .addComponent(jLabel8))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(row, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(col, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(jPanel6Layout.createSequentialGroup()
+                        .addGap(20, 20, 20)
+                        .addComponent(jLabel6))
+                    .addGroup(jPanel6Layout.createSequentialGroup()
+                        .addGap(18, 18, 18)
+                        .addComponent(reserve)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
         jPanel3Layout.setHorizontalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 430, Short.MAX_VALUE)
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addGap(130, 130, 130)
+                .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(133, Short.MAX_VALUE))
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 295, Short.MAX_VALUE)
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, 283, Short.MAX_VALUE)
+                .addContainerGap())
         );
 
         jTabbedPane1.addTab("Reserve", jPanel3);
@@ -146,10 +335,12 @@ public class ReservationSysUI extends javax.swing.JFrame {
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(18, 18, 18)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jTabbedPane1)
-                    .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 450, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addComponent(jTabbedPane1))
+                .addContainerGap())
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -192,6 +383,103 @@ public class ReservationSysUI extends javax.swing.JFrame {
         }
         jTextArea1.setText(flightList.toString());
     }//GEN-LAST:event_updateFlightsActionPerformed
+
+    private void lookUpFlActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_lookUpFlActionPerformed
+        // TODO add your handling code here:
+        String flightID = flightIDRes.getText();
+        Flight flight = serverThread.getFlight(flightID);
+        StringBuilder flightInfo = new StringBuilder();
+        if (flight != null) {
+            flightInfo.append("========== Flight ").append(flight.getFlightID()).append(" ==========\n\n");
+            flightInfo.append("Origin: ").append(flight.getOrigin().getName()).append("\n");
+            flightInfo.append("Destination: ").append(flight.getDestination().getName()).append("\n");
+            flightInfo.append("Airplane: ").append(flight.getAirplane().getAirplaneID()).append("\n");
+            flightInfo.append("Departure Time: ").append(flight.getDepartureTime()).append("\n");
+            flightInfo.append("Arrival Time: ").append(flight.getArrivalTime()).append("\n");
+            flightInfo.append("Duration: ").append(flight.getDuration()).append(" hours\n");
+            flightInfo.append("Distance: ").append(flight.getDistance()).append(" km\n\n");
+            flightInfo.append("Seats:\n");
+            flightInfo.append(flight.getAirplane().displaySeats());
+            jTextArea3.setText(flightInfo.toString());
+        } else {
+            jTextArea3.setText("Flight not found");
+        }
+    }//GEN-LAST:event_lookUpFlActionPerformed
+
+    private void reserveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_reserveActionPerformed
+        // TODO add your handling code here:
+        String flightID = flightIDRes.getText();
+        Flight flight = serverThread.getFlight(flightID);
+        if (flight != null) {
+            int row = Integer.parseInt(this.row.getText());
+            char col = this.col.getText().charAt(0);
+            Seat seat = flight.getAirplane().getSeat(row, col);
+            if (seat != null) {
+                if (seat.isAvailable()) {
+                    seat.setAvailable(false);
+                    String ticketNumber = "T" + (int) (Math.random() * 1000);
+                    Ticket ticket = new Ticket(ticketNumber, flight, row, col);
+                    user.addTicket(ticket);
+                    JOptionPane.showMessageDialog(this, "Seat reserved successfully");
+                    return;
+                } else {
+                    JOptionPane.showMessageDialog(this, "Seat not available");
+                    return;
+                }
+            } else {
+                JOptionPane.showMessageDialog(this, "Seat not found");
+                return;
+            }
+        } else {
+            jTextArea3.setText("Flight not found");
+        }
+    }//GEN-LAST:event_reserveActionPerformed
+
+    private void showAllTKTActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_showAllTKTActionPerformed
+        // TODO add your handling code here:
+        jTextArea2.setText("");
+        StringBuilder ticketList = new StringBuilder();
+        for (Ticket ticket : user.getTickets()) {
+            ticketList.append("========== Ticket ").append(ticket.getTicketNumber()).append(" ==========\n\n");
+            ticketList.append("Flight: ").append(ticket.getFlight().getFlightID()).append("\n");
+            ticketList.append("Seat: ").append(ticket.getSeat().getRow()).append(ticket.getSeat().getColumn()).append("\n\n");
+        }
+        jTextArea2.setText(ticketList.toString());
+    }//GEN-LAST:event_showAllTKTActionPerformed
+
+    private void showTKTActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_showTKTActionPerformed
+        // TODO add your handling code here:
+        String ticketID = this.ticketID.getText();
+        Ticket ticket = null;
+        for (Ticket t : user.getTickets()) {
+            if (t.getTicketNumber().equals(ticketID)) {
+                ticket = t;
+                break;
+            }
+        }
+        if (ticket != null) {
+            jTextArea2.setText("");
+            StringBuilder ticketInfo = new StringBuilder();
+            ticketInfo.append("========== Ticket ").append(ticket.getTicketNumber()).append(" ==========\n\n");
+            ticketInfo.append("User: ").append(user.getFirstName()).append(" ").append(user.getLastName()).append("\n");
+            ticketInfo.append("---> Flight Info <---").append("\n");
+            ticketInfo.append("Flight ID: ").append(ticket.getFlight().getFlightID()).append("\n");
+            ticketInfo.append("Origin: ").append(ticket.getFlight().getOrigin().getName()).append("\n");
+            ticketInfo.append("Destination: ").append(ticket.getFlight().getDestination().getName()).append("\n");
+            ticketInfo.append("Departure Time: ").append(ticket.getFlight().getDepartureTime()).append("\n");
+            ticketInfo.append("Arrival Time: ").append(ticket.getFlight().getArrivalTime()).append("\n");
+            ticketInfo.append("Duration: ").append(ticket.getFlight().getDuration()).append(" hours\n");
+            ticketInfo.append("Distance: ").append(ticket.getFlight().getDistance()).append(" km\n\n");
+            ticketInfo.append("---> Seat Info <---").append("\n");
+            ticketInfo.append("Row: ").append(ticket.getSeat().getRow()).append("\n");
+            ticketInfo.append("Column: ").append(ticket.getSeat().getColumn()).append("\n");
+            ticketInfo.append("---> Airplane Map <---").append("\n");
+            ticketInfo.append(ticket.getFlight().getAirplane().displaySeats());
+            jTextArea2.setText(ticketInfo.toString());
+        } else {
+            jTextArea2.setText("Ticket not found");
+        }
+    }//GEN-LAST:event_showTKTActionPerformed
 
     /**
      * @param args the command line arguments
@@ -237,15 +525,35 @@ public class ReservationSysUI extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JTextField col;
+    private javax.swing.JTextField flightIDRes;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
+    private javax.swing.JPanel jPanel5;
+    private javax.swing.JPanel jPanel6;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JTabbedPane jTabbedPane1;
     private javax.swing.JTextArea jTextArea1;
+    private javax.swing.JTextArea jTextArea2;
+    private javax.swing.JTextArea jTextArea3;
+    private javax.swing.JButton lookUpFl;
+    private javax.swing.JButton reserve;
+    private javax.swing.JTextField row;
+    private javax.swing.JButton showAllTKT;
+    private javax.swing.JButton showTKT;
+    private javax.swing.JTextField ticketID;
     private javax.swing.JButton updateFlights;
     // End of variables declaration//GEN-END:variables
 }

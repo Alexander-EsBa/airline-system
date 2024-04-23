@@ -78,4 +78,8 @@ public class User {
                 ", tickets=" + tickets +
                 '}';
     }
+
+    public void addTicket(Ticket ticket){
+        this.tickets.add(ticket);
+    }
 }

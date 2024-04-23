@@ -32,4 +32,13 @@ public class ReservServerThread extends Thread{
     public ArrayList<Flight> getFlights(){
         return this.flights;
     }
+
+    public Flight getFlight(String flightID){
+        for(Flight flight: this.flights){
+            if(flight.getFlightID().equals(flightID)){
+                return flight;
+            }
+        }
+        return null;
+    }
 }
