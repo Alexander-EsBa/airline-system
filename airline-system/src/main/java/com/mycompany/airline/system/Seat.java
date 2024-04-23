@@ -1,6 +1,8 @@
 package com.mycompany.airline.system;
 
-public class Seat {
+import java.io.Serializable;
+
+public class Seat implements Serializable {
     // Attributes
     private int row;
     private char column;

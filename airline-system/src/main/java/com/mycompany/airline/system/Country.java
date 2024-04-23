@@ -1,8 +1,9 @@
 package com.mycompany.airline.system;
 
 import java.awt.image.BufferedImage;
+import java.io.Serializable;
 
-public class Country {
+public class Country implements Serializable {
     // Attributes
     private String name;
     private int code;

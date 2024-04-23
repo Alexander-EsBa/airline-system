@@ -1,8 +1,9 @@
 package com.mycompany.airline.system;
 
+import java.io.Serializable;
 import java.time.LocalDateTime;
 
-public class Flight {
+public class Flight implements Serializable {
     // Attributes
     private String flightID;
     private Country origin;

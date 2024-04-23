@@ -1,6 +1,8 @@
 package com.mycompany.airline.system;
 
-public class Passenger {
+import java.io.Serializable;
+
+public class Passenger implements Serializable {
     // Attributes
     private String name;
 

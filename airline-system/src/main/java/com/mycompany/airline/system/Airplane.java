@@ -1,6 +1,8 @@
 package com.mycompany.airline.system;
 
-public class Airplane {
+import java.io.Serializable;
+
+public class Airplane implements Serializable {
     // Attributes
     private String airplaneID;
     private String airplaneModel;
@@ -95,5 +97,9 @@ public class Airplane {
             str.append("\n");
         }
         return str.toString();
+    }
+
+    public Seat getSeat(int row, char column){
+        return seats[row - 1][column - 'A'];
     }
 }
