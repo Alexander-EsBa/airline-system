@@ -10,23 +10,17 @@ import java.util.Date;
  *
  * @author marih
  */
-public class Employee extends User {
-
+public class Employee extends User{
     private String role;
     private double salary;
 
-    // Constructor vacío
-    public Employee() {
-    }
-
-    // Constructor con parámetros
-    public Employee(String role, double salary, int idUser, String firstName, String lastName, Date birthday, String country, int phoneNumber, String email) {
+    //Constructor
+    public Employee(String role, double salary, int idUser, String firstName, String lastName, Date birthday, String country, String phoneNumber, String email) {
         super(idUser, firstName, lastName, birthday, country, phoneNumber, email);
         this.role = role;
         this.salary = salary;
     }
 
-    // Getter y Setter para role
     public String getRole() {
         return role;
     }
@@ -35,7 +29,6 @@ public class Employee extends User {
         this.role = role;
     }
 
-    // Getter y Setter para salary
     public double getSalary() {
         return salary;
     }

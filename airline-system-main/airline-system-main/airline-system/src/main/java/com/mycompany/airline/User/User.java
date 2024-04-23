@@ -17,14 +17,14 @@ public class User {
     private String lastName;
     private Date birthday;
     private String country;
-    private int phoneNumber;
+    private String phoneNumber;
     private String email;
 
     //constructor
     public User() {
     }
 
-    public User(int idUser, String firstName, String lastName, Date birthday, String country, int phoneNumber, String email) {
+    public User(int idUser, String firstName, String lastName, Date birthday, String country, String phoneNumber, String email) {
         this.idUser = idUser;
         this.firstName = firstName;
         this.lastName = lastName;
@@ -74,11 +74,11 @@ public class User {
         this.country = country;
     }
 
-    public int getPhoneNumber() {
+    public String getPhoneNumber() {
         return phoneNumber;
     }
 
-    public void setPhoneNumber(int phoneNumber) {
+    public void setPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
     }
 

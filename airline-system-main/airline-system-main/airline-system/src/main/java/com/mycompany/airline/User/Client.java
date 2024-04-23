@@ -13,17 +13,12 @@ import java.util.Date;
 public class Client extends User {
     private int idPassport;
 
-    // Constructor vacío
-    public Client() {
-    }
-    
-    // Constructor con parámetros
-    public Client(int idPassport, int idUser, String firstName, String lastName, Date birthday, String country, int phoneNumber, String email) {
+    //constructor
+    public Client(int idPassport, int idUser, String firstName, String lastName, Date birthday, String country, String phoneNumber, String email) {
         super(idUser, firstName, lastName, birthday, country, phoneNumber, email);
         this.idPassport = idPassport;
     }
-    
-    // Getter y Setter para idPassport
+
     public int getIdPassport() {
         return idPassport;
     }
